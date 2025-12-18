@@ -11,7 +11,7 @@ const Cart = () => {
 
   const fetchCart = async () => {
     try {
-      const { data } = await axios.get("http://localhost:2000/carts", {
+      const { data } = await axios.get("https://ecommerce-backend-f0eb.onrender.com/carts", {
         headers: {
           Authorization: token,
         },
@@ -48,7 +48,7 @@ const Cart = () => {
     if (newQty < 1) return;
 
     await axios.put(
-      "http://localhost:2000/carts/update",
+      "https://ecommerce-backend-f0eb.onrender.com/carts/update",
       { productId, quantity: newQty },
       { headers: { Authorization: token } }
     );
@@ -59,7 +59,7 @@ const Cart = () => {
   // 🔹 REMOVE ITEM
   const removeItem = async (productId) => {
     await axios.delete(
-      `http://localhost:2000/carts/delete/${productId}`,
+      `https://ecommerce-backend-f0eb.onrender.com/carts/delete/${productId}`,
       { headers: { Authorization: token } }
     );
 
@@ -87,7 +87,7 @@ const Cart = () => {
     };
 
     const {data}=await axios.post(
-      "http://localhost:2000/orders/create",
+      "https://ecommerce-backend-f0eb.onrender.com/orders/create",
       orderData,
       {
         headers: {

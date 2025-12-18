@@ -10,7 +10,7 @@ const App = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const { data } = await axios.get("http://localhost:2000/products");
+            const { data } = await axios.get("https://ecommerce-backend-f0eb.onrender.com/products");
             setproducts(data);
         }
         fetchData()

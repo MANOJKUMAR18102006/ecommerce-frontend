@@ -25,7 +25,7 @@ const SignupForm = () => {
     const handleSumbit = async (e) => {
         e.preventDefault();
         console.log(name,email, passwordRef.current.value, role)
-        const {data}=await axios.post("http://localhost:2000/auth/register",{
+        const {data}=await axios.post("https://ecommerce-backend-f0eb.onrender.com/auth/register",{
             name:name,
             email:email,
             password:passwordRef.current.value,

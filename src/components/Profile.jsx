@@ -18,7 +18,7 @@ const Profile = () => {
 
     const fetchProfile = async () => {
       try {
-        const res = await axios.get("http://localhost:2000/profile", {
+        const res = await axios.get("https://ecommerce-backend-f0eb.onrender.com/profile", {
           headers: {
             Authorization: `${token}`,
           },

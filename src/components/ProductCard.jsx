@@ -19,7 +19,7 @@ const ProductCard = (props) => {
       }
 
       await axios.post(
-        "http://localhost:2000/carts/add",
+        "https://ecommerce-backend-f0eb.onrender.com/carts/add",
         {
           productId: id,
           quantity: 1,

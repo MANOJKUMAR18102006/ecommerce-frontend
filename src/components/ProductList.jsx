@@ -7,7 +7,7 @@ const ProductList = () => {
     const [products,setproducts]=useState([]);
     useEffect(()=>{
         const fetchData=async()=>{
-            const res=await axios.get("http://localhost:2000/products")
+            const res=await axios.get("https://ecommerce-backend-f0eb.onrender.com/products")
             setproducts(res.data);
         }
         fetchData()

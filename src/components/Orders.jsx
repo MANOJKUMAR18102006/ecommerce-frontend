@@ -10,7 +10,7 @@ const Orders = () => {
         const token = sessionStorage.getItem("token");
 
         const { data } = await axios.get(
-          "http://localhost:2000/orders/my-orders",
+          "https://ecommerce-backend-f0eb.onrender.com/orders/my-orders",
           {
             headers: {
               Authorization: token,

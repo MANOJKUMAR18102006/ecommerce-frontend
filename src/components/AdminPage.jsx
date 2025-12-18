@@ -27,7 +27,7 @@ const AdminPage = () => {
 
     const handleAdd = async (e) => {
         e.preventDefault();
-        const res = await axios.post("http://localhost:2000/products", {
+        const res = await axios.post("https://ecommerce-backend-f0eb.onrender.com/products", {
             name: productname,
             image: image,
             sellingprice: sellingprice,
