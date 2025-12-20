@@ -43,7 +43,7 @@ const ProductCard = (props) => {
     return (
         <>
         <div className="w-[400px] bg-slate-50 rounded-[20px] shadow-xl p-4 m-3 gap-10">
-        <Link to={`/products/${id}`}>
+        <Link to={`/products/${id}`} state={{ id, name, image, sellingprice }}>
             <div className="">
                 <img src={image} alt={name} className="w-full rounded-[20px] shadow-xl" />
                 <h1 className="font-semibold text-[30px] text-center pt-4">{name}</h1>
