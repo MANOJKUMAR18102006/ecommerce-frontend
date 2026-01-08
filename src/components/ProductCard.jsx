@@ -30,9 +30,7 @@ const ProductCard = (props) => {
           },
         }
       );
-      toast.success("Item added in cart")
-      navigate("/cart");
-      
+      toast.success("Item added in cart")      
     } catch (err) {
       console.error(err);
       alert("Failed to add to cart");

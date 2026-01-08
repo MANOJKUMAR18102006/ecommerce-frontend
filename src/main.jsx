@@ -15,6 +15,7 @@ import ProtectedRoute from './components/ProtectedRoute.jsx';
 import {ToastContainer} from "react-toastify"
 import SignupForm from './components/SignupForm.jsx';
 import Profile from './components/Profile.jsx';
+import Checkout from './components/Checkout.jsx';
 
 createRoot(document.getElementById('root')).render(
     <>
@@ -28,6 +29,7 @@ createRoot(document.getElementById('root')).render(
                     <Route path=':id' element={<ProductDetails/>} />
                 </Route>
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/checkout" element={<ProtectedRoute><Checkout /></ProtectedRoute>} />
                 <Route path="/orders" element={<ProtectedRoute><Orders /></ProtectedRoute>} />
                 <Route path="/about" element={<About />} />
                 <Route path="/profile" element={<Profile />} />

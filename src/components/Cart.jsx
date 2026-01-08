@@ -66,41 +66,9 @@ const Cart = () => {
     fetchCart();
   };
 
-  const handleBuy = async () => {
-  try {
-    const token = sessionStorage.getItem("token");
-
-    if (!token) {
-      alert("Please login first");
-      return;
-    }
-    const orderData = {
-      billingAddress: {
-        name: "Test User",
-        phone: "9999999999",
-        street: "MG Road",
-        city: "Chennai",
-        state: "TN",
-        pincode: "600001",
-      },
-      paymentMethod: "COD",
-    };
-
-    const {data}=await axios.post(
-      "https://ecommerce-backend-f0eb.onrender.com/orders/create",
-      orderData,
-      {
-        headers: {
-          Authorization: token,
-        },
-      }
-    );
-    toast.success(data.message);
-    navigate("/orders");
-  } catch (err) {
-    alert("Failed to place order");
-  }
-};
+  const handleBuy = () => {
+    navigate("/checkout");
+  };
 
 
 
