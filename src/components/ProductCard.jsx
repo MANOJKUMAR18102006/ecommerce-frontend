@@ -40,16 +40,16 @@ const ProductCard = (props) => {
 
     return (
         <>
-        <div className="w-full sm:w-[350px] lg:w-[400px] bg-slate-50 rounded-[20px] shadow-xl p-4 m-3">
+        <div className="w-[400px] bg-slate-50 rounded-[20px] shadow-xl p-4 m-3 gap-10">
         <Link to={`/products/${id}`} state={{ id, name, image, sellingprice }}>
             <div className="">
-                <img src={image} alt={name} className="w-full h-48 sm:h-56 lg:h-64 object-cover rounded-[20px] shadow-xl" />
-                <h1 className="font-semibold text-lg sm:text-xl lg:text-2xl text-center pt-4">{name}</h1>
-                <p className="font-bold text-lg sm:text-xl lg:text-2xl text-center pb-3">From ₹{sellingprice}*</p>
+                <img src={image} alt={name} className="w-full rounded-[20px] shadow-xl" />
+                <h1 className="font-semibold text-[30px] text-center pt-4">{name}</h1>
+                <p className="font-bold text-[30px] text-center pb-3">From ₹{sellingprice}*</p>
                 </div>
                 </Link>
                 <button className="bg-orange-400 rounded-[15px] shadow-xl transform transition-transform duration-300 
-            hover:scale-110 mb-4 p-2 sm:p-3 px-4 w-full cursor-pointer text-sm sm:text-base" onClick={handleCart}>Add to Cart +</button>
+            hover:scale-110 mb-4 p-3 pl-4 pr-4 ml-30 cursor-pointer" onClick={handleCart}>Add to Cart +</button>
             </div>
         </>
     );
